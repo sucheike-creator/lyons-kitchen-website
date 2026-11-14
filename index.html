@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover delicious food and a memorable dining experience at Lyon's Kitchen."
+    />
+    <title>Lyon's Kitchen | Exceptional Dining</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#home" class="brand">
+        <span class="brand-mark">LK</span>
+        <span>LYON'S <strong>KITCHEN</strong></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+        <button class="cart-button" id="open-cart">
+          Your Cart <span id="cart-count">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">A TASTE OF SOMETHING SPECIAL</p>
+          <h1>Good food.<br /><span>Beautiful moments.</span></h1>
+          <p class="hero-description">
+            Discover thoughtfully prepared dishes, rich flavours, and a dining
+            experience worth sharing.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="button button-gold">Explore Our Menu</a>
+            <a href="#story" class="text-link">Discover our story ↗</a>
+          </div>
+          <p class="hero-note">A restaurant concept by Lyon's Kitchen</p>
+        </div>
+        <div
+          class="hero-image"
+          role="img"
+          aria-label="Beautifully presented restaurant meal"
+        ></div>
+        <div class="hero-number">01 — THE DINING EXPERIENCE</div>
+      </section>
+
+      <section class="story section" id="story">
+        <div
+          class="story-image"
+          role="img"
+          aria-label="Elegant food presentation"
+        ></div>
+        <div class="story-copy">
+          <p class="eyebrow">OUR PHILOSOPHY</p>
+          <h2>Made with care.<br /><span>Served with heart.</span></h2>
+          <p>
+            At Lyon's Kitchen, every meal begins with an appreciation for good
+            ingredients, thoughtful preparation, and the joy of bringing people
+            together.
+          </p>
+          <p>
+            From relaxed lunches to memorable dinners, our goal is to make every
+            visit feel special.
+          </p>
+          <a href="#menu" class="text-link">Find your favorite dish ↗</a>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="menu">
+        <div class="section-heading">
+          <p class="eyebrow">A SELECTION OF FAVORITES</p>
+          <h2>Explore the <span>menu.</span></h2>
+          <p>Discover something delicious for your next meal.</p>
+        </div>
+
+        <div class="menu-filters" id="menu-filters">
+          <button class="filter-button active" data-category="all">
+            All dishes
+          </button>
+          <button class="filter-button" data-category="mains">
+            Main dishes
+          </button>
+          <button class="filter-button" data-category="sides">Sides</button>
+          <button class="filter-button" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <!-- JavaScript adds the menu cards here. -->
+        </div>
+
+        <p class="menu-note">
+          Portfolio demo menu: dishes and prices are illustrative, not a live
+          restaurant offer.
+        </p>
+      </section>
+
+      <section class="experience section">
+        <div class="experience-content">
+          <p class="eyebrow">YOUR NEXT FAVORITE MEAL</p>
+          <h2>Something delicious<br />is waiting for you.</h2>
+          <p>Explore the menu and put together an order that suits you.</p>
+          <button class="button button-gold" id="experience-cart">
+            Start your order
+          </button>
+        </div>
+      </section>
+
+      <section class="contact-section section" id="contact">
+        <div>
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>We'd love to<br /><span>hear from you.</span></h2>
+          <p>
+            Have a question about the menu or your order? Start a conversation
+            with us on WhatsApp.
+          </p>
+        </div>
+        <a
+          class="button button-gold"
+          id="contact-whatsapp"
+          href="https://wa.me/2348105722448"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chat on WhatsApp ↗
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#home" class="brand footer-brand">
+        <span class="brand-mark">LK</span>
+        <span>LYON'S <strong>KITCHEN</strong></span>
+      </a>
+      <p>A thoughtfully crafted restaurant website concept.</p>
+      <p>© <span id="current-year"></span> Lyon's Kitchen</p>
+    </footer>
+
+    <!-- Cart drawer -->
+    <div class="cart-overlay" id="cart-overlay" hidden>
+      <button
+        class="overlay-backdrop"
+        id="close-cart-backdrop"
+        aria-label="Close cart"
+      ></button>
+
+      <aside
+        class="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+      >
+        <div class="cart-header">
+          <div>
+            <p class="eyebrow">YOUR SELECTION</p>
+            <h2 id="cart-title">Your cart</h2>
+          </div>
+          <button class="close-cart" id="close-cart" aria-label="Close cart">
+            ×
+          </button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+          <p class="empty-cart">Your cart is empty. Find a dish you love.</p>
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total">₦0</strong>
+          </div>
+          <p class="cart-disclaimer">
+            Demo prices only. Delivery fees, if any, are not included.
+          </p>
+          <button class="button button-gold full-button" id="checkout-button">
+            Order via WhatsApp
+          </button>
+          <button class="clear-cart" id="clear-cart">Clear cart</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
