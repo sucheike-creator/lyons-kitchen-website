@@ -266,7 +266,7 @@ a:focus-visible {
   width: 100%;
   min-height: 430px;
   background-color: #29271f;
-  background-image: url("/images/PHILO.jpg");
+  background-image: url("images/PHILO.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -299,7 +299,7 @@ a:focus-visible {
   width: 100%;
   min-height: 430px;
   background-color: #29271f;
-  background-image: url("/images/PHILO.jpg");
+  background-image: url("images/PHILO.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -470,7 +470,7 @@ a:focus-visible {
   text-align: center;
   background:
     linear-gradient(rgba(17, 17, 15, 0.8), rgba(17, 17, 15, 0.85)),
-    url("/images/Explore.jpg") center/cover;
+    url("images/Explore.jpg") center/cover;
 }
 
 .experience h2 {
